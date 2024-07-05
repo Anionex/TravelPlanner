@@ -1,0 +1,27 @@
+> Entering new AgentExecutor chain...
+奥利维亚·王尔德的男朋友是谁是一个涉及当前事件的问题，我需要使用Google搜索
+来获取最新信息。然后，我需要计算他现在的年龄的0.23次方。
+
+Action: google_serper
+Action Input: "Olivia Wilde boyfriend 2023"
+
+Observation: Olivia Wilde might finally be moving on from ex Harry Styles as she is spotted hugging actor Nick Thune on night out together. Actress Olivia Wilde has been having a difficult time getting over former boyfriend Harry Styles lately. Following their whirlwind romance and release of their ... ” Wilde and Styles were last photographed together on Monday, November 14. Aug. 4, 2023. On Friday, August 4, Harry Styles was photographed with friends on a ... Ready for love! Olivia Wilde is officially back on the dating scene following her split from her ex-boyfriend, Harry Styles. Looks like Olivia Wilde and Jason Sudeikis are starting 2023 on good terms. Amid their highly publicized custody battle – and the actress' ... The two started dating after Wilde split up with actor Jason Sudeikisin 2020. However, their relationship came to an end last November. Late night talking? Olivia Wilde is “quietly dating again” following her November 2022 split from Harry Styles, a source exclusively tells ... No one gaf who Bradley Cooper is dating. He has nine Academy Award nominations. He doesn't need to date Olivia Wilde, nor she, he. Actors are ... Olivia Wilde and Chris Rock were spotted together after Leonardo DiCaprio's 49th birthday bash in Los Angeles.
+Thought:Based on the search results, Olivia Wilde's most recent known boyfriend was Harry Styles, but they split in November 2022. There are mentions of her being spotted with actor Nick Thune, but it is not confirmed if he is her current boyfriend.
+
+For the next part of the question, I need to find Harry Styles' current age and then calculate the 0.23 power of that age.
+
+Action: google_serper
+Action Input: "Harry Styles age 2023"
+
+Observation: Harry Edward Styles is currently 30-years-old, as his birthday is 1st February 1994. He was the youngest member of One Direction. Harry's star sign is Aquarius - in keeping with his star sign, he has an "outwardly expressive, extrovert" personality.
+Thought:Harry Styles is currently 30 years old. Now, I need to calculate the 0.23 power of 30.
+
+Action: Calculator
+Action Input: 30^0.23
+
+Observation: Answer: 2.186441634154417
+Thought:I now know the final answer.
+
+Final Answer: 奥利维亚·王尔德的前男友是哈里·斯泰尔斯，他现在的年龄是30岁。30的0.23次方是2.186441634154417。
+
+> Finished chain.
