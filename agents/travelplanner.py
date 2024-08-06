@@ -111,7 +111,7 @@ class ReactAgent:
         if 'gpt-3.5' in react_llm_name:
             stop_list = ['\n']
             self.max_token_length = 15000
-            self.llm = ChatOpenAI(temperature=1,
+            self.llm = ChatOpenAI(temperature=0, # 改为0，最大程度防止不一样
                      max_tokens=256,
                      model_name=react_llm_name,
                      model_kwargs={"stop": stop_list})
@@ -482,11 +482,12 @@ class ReactAgent:
         for tool_name in tools:
             module = importlib.import_module("tools.{}.apis".format(tool_name))
             
-            tools_map[tool_name] = getattr(module, tool_name[0].upper()+tool_name[1:])() # 这里的代码写的太烂了
+            if tool_name != 'planner':
+                tools_map[tool_name] = getattr(module, tool_name[0].upper()+tool_name[1:])() # 这里的代码写的太烂了
             if tool_name == 'planner' and planner_model_name is not None:
                 class_name = 'Planner'
                 tools_map[tool_name] = getattr(module, class_name)(model_name=planner_model_name)
-        return tools_map
+        return tools_map # 上方逻辑会导致planner工具被实例化两个，有一个被浪费了。14：15已修复。
 
     def load_city(self, city_set_path: str) -> List[str]:
         city_set = []
